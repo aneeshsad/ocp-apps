@@ -1,0 +1,9 @@
+FROM registry.redhat.io/rhel8/nodejs-16-minimal:latest
+
+COPY . .
+
+USER 1001
+
+RUN npm install
+
+ENTRYPOINT node app.js
